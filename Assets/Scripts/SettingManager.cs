@@ -22,11 +22,15 @@ public class SettingManager : MonoBehaviour
         elementSize = initialElementSize;
         flyingTime = initialFlyingTime;
         flyingSpd = initialFlyingSpd;
-        maxMixNum = initialMaxMixNum;
         hpDecrease = initialHPDecrease;
+
+        if (PlayManager.Instance.gameMode == 1)
+            maxMixNum = initialMaxMixNum;
+        else if (PlayManager.Instance.gameMode == 2)
+            maxMixNum = 2f;
     }
 
-    private const float initialRegenSpd = 3f;       //초당 리젠 수
+    private const float initialRegenSpd = 2f;       //초당 리젠 수
     public static float regenSpd;
 
     private const float initialDeactivateTime = 2f;
@@ -35,7 +39,7 @@ public class SettingManager : MonoBehaviour
     private const float initialFlyingTime = 1f;
     public static float flyingTime;
 
-    private const float initialFlyingSpd = 10f;
+    private const float initialFlyingSpd = 50f;
     public static float flyingSpd;
 
     private const float initialElementSize = 0.75f;

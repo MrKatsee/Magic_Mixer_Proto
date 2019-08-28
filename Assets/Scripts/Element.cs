@@ -36,7 +36,7 @@ public class Element : MonoBehaviour
 
         while (timer <= elementActivateTime)
         {
-            float cur_Size = Mathf.Lerp(SettingManager.elementSize * 0.5f, SettingManager.elementSize, timer);
+            float cur_Size = Mathf.Lerp(SettingManager.elementSize * 0.8f, SettingManager.elementSize, timer);
             
             transform.localScale = new Vector3(cur_Size, cur_Size, 1f);
 

@@ -17,6 +17,8 @@ public class PlayManager : MonoBehaviour
 
     float elementSize = 0.5f;
 
+    public int gameMode;
+
     private void Awake()
     {
         Instance = this;
@@ -24,6 +26,8 @@ public class PlayManager : MonoBehaviour
 
     private void Start()
     {
+        if (gameMode == 0)
+            return;
         GameStart();
     }
 
